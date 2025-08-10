@@ -1,0 +1,510 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo-red {
+    color: red;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.logo-green {
+    color: #1ca68c;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.pricing-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.hero-text {
+    flex: 1 1 400px;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-size: 2em;
+}
+
+.highlight {
+    color: red;
+    font-weight: bold;
+}
+
+.email-form {
+    display: flex;
+    margin: 15px 0;
+}
+
+.email-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+}
+
+.email-form button {
+    background: #a4d37d;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+.hero-images {
+    flex: 1 1 400px;
+    position: relative;
+    padding: 20px;
+}
+
+.hero-images img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e5f4e3;
+    color: #1c693a;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.badge.blue {
+    background: #e6f2ff;
+    color: #005b96;
+    bottom: 50px;
+    top: auto;
+}
+
+.blueprint {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.blueprint h2 {
+    margin: 10px 0;
+}
+
+.countdown-btn {
+    border: 1px solid black;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.step {
+    padding: 8px 15px;
+    border-bottom: 3px solid #00bcd4;
+}
+.timeline-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.step-icon {
+    flex: 0 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+.step-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.step-text {
+    background: #fefbea;
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.step-text h4 {
+    margin: 0;
+    color: #777;
+    font-weight: normal;
+}
+
+.step-text p {
+    margin: 5px 0 0;
+    line-height: 1.4em;
+    font-size: 0.95em;
+}
+
+.step-text strong {
+    font-weight: bold;
+    color: #000;
+}
+
+.highlight {
+    color: red;
+    font-weight: bold;
+}
+.timeline-section {
+    padding: 60px 0;
+    background-color: var(--light-gray);
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 40px auto 0;
+}
+
+.timeline-progress {
+    position: absolute;
+    height: 4px;
+    background: var(--medium-gray);
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.timeline-progress::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background: var(--primary-color);
+    transition: width 0.5s ease;
+}
+
+.timeline-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 80px;
+}
+
+.timeline-step {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 3px solid var(--medium-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.timeline-step.active {
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.step-content {
+    display: none;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.step-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.transform-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 20px;
+    align-items: center;
+}
+
+.transform-left {
+    flex: 1 1 400px;
+}
+
+.transform-left h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.transform-left p {
+    line-height: 1.5em;
+    margin-bottom: 20px;
+}
+
+.get-started-btn {
+    background: #a4d37d;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.transform-right {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feature-box {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 0.95em;
+    align-items: flex-start;
+}
+
+.feature-box img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.feature-box strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.feature-box.green {
+    background: #6bbf59;
+}
+
+.feature-box.purple {
+    background: #a68ed4;
+}
+
+.feature-box.orange {
+    background: #f0a64a;
+}
+.success-story {
+  padding: 60px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.section-header {
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.section-header .tag {
+  display: inline-block;
+  padding: 5px 15px;
+  border: 2px solid #0077ff;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-header h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.explore-btn {
+  padding: 8px 18px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background: none;
+  cursor: pointer;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: #fffbea;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.card img {
+  width: 40px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+.faq-section {
+  position: relative;
+  max-width: 1440px;
+  }
+
+.faq-header {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 40px;
+}
+
+.faq-header button {
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 500;
+  background: none;
+  cursor: default;
+}
+
+/* Shared row style */
+.faq-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 48px;
+  width: 1280px;
+  height: 256px;
+  position: absolute;
+  left: 82px;
+}
+
+/* Row positions */
+.row-1 {
+  top: 200px; /* adjust as needed */
+}
+
+.row-2 {
+  top: 500px; /* adjust for spacing */
+}
+
+.faq-item {
+  flex: 1;
+}
+
+.faq-item h3 {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.faq-section {
+  max-width: 1440px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.faq-header {
+  margin-bottom: 40px;
+}
+
+.faq-header button {
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 500;
+  background: none;
+  cursor: default;
+}
+
+/* FAQ Rows */
+.faq-row {
+  display: flex;
+  flex-wrap: wrap; /* lets it wrap on smaller screens */
+  gap: 48px;
+  margin-bottom: 40px; /* spacing between rows */
+}
+
+.faq-item {
+  flex: 1 1 300px; /* responsive width */
+}
+
+.faq-item h3 {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+
+
